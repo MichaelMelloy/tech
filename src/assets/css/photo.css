@@ -1,0 +1,75 @@
+.cover
+{
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 250%;
+    color: var(--text-color-1);
+}
+
+.container
+{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 1%;
+    transition: 1s;
+}
+
+.slot {
+    box-sizing: border-box;
+    height: 39.8vw;
+    width: 39.8vw;
+    display: inline-block;
+    vertical-align: top; /*not required*/
+    position: relative;
+    margin-bottom: 3%;
+    border: 2px solid var(--text-color-1-inverted);
+  }
+  
+  .container img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  
+  /* everything below is not required */
+  .slot span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: var(--text-color-1);
+    background: var(--text-color-1-inverted);
+    font-size: 100%;
+    padding: 10px;
+  }
+
+  .cover img
+  {
+    width: 1.5%;
+    transition: 0.1s;
+  }
+
+  .cover img:hover
+  {
+    opacity: 0.8;
+  }
+
+  .cover img:active
+  {
+    opacity: 0.2;
+  }
+
+  .white
+  {
+    display: inline;
+    margin-left: 60%;
+  }

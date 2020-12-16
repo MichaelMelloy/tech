@@ -1,0 +1,38 @@
+.projectContainer
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    background: var(--text-color-1-inverted);
+    color: var(--text-color-1);
+    font-size: 125%;
+    display: inline-block;
+}
+
+.innerContainer
+{
+    padding: 2%;
+}
+
+.projectContainer a
+{
+    position: relative;
+    top: -5vh;
+    left: 85%;
+}
+
+.projectContainer span
+{
+    font-size: 133%;
+}
+
+.someday
+{
+    margin-top: 15%;
+    color:  var(--text-color-1);
+    font-size: 300%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15%;
+}
+

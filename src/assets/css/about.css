@@ -1,0 +1,25 @@
+.cover
+{
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 250%;
+    color: var(--text-color-1);
+    margin-bottom: 3%;
+}
+
+.occupation
+{
+    margin-left: 10%;
+    font-size: 125%;
+    margin-bottom: 1%;
+    color: var(--text-color-2);
+}
+
+.text
+{
+    letter-spacing: 2px;
+    margin-left: 10%;
+    font-size: 150%;
+    color: var(--text-color-1);
+    margin-bottom: 5%;
+}

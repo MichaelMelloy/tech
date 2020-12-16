@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/maincss.css">
+        <link rel="stylesheet" type="text/css" href="../css/photo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+        <script src="../js/main.js"></script>
+        <meta charset="utf-8" />
+        <link rel="icon" href="../media/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body class="body" onload="thisEventListener();">
+        <img src="../media/rocket.png" class="scroll">
+        <!--NAVBAR-->
+        <div class="header">
+            <nav>
+                <a href="../index" class="logo">
+                    <img src="../media/rocket.png">
+                </a>
+
+                <ul>
+                    <a href="photography">PHOTOGRAPHY</a>
+                    <a href="astrophotography">ASTROPHOTOGRAPHY</a>
+                    <a href="projects">PROJECTS</a>
+                    <a href="about">ABOUT</a>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cover">
+            Astrophotography
+            <p class="white"></p>
+            <img onclick="resize(60)" src="../media/one.png">
+            <img onclick="resize(39.8)" src="../media/two.png">
+            <img onclick="resize(19.4)" src="../media/four.png">
+        </div>
+
+
+        <div class="container">
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/andromeda.jpg"> <img src="../media/astro/andromeda.jpg"/> </a>
+                <span>Andromeda Galaxy</span>
+            </div>
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/milkyway.jpg"> <img src="../media/astro/milkyway.jpg"/> </a>
+                <span>Milkyway</span>
+            </div>
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/moon.jpg"> <img src="../media/astro/moon.jpg"/> </a>
+                <span>Earth's Moon</span>
+            </div>
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/orion.jpg"> <img src="../media/astro/orion.jpg"/> </a>
+                <span>Orion Nebula</span>
+            </div>
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/rise.jpg"> <img src="../media/astro/rise.jpg"/> </a>
+                <span>Moon Rise</span>
+            </div>
+
+            <div class=slot>                
+                <a target="_blank" href="../media/astro/treelight.jpg"> <img src="../media/astro/treelight.jpg"/> </a>
+                <span>Moon"shine"</span>
+            </div>
+            
+        </div>
+
+        <!--Footer-->
+        <div class="Footer">
+            <div class="footContainer">
+                <div class="Name">Michael Deiwald</div>
+                <a href="legal" class="Legal">Datenschutz / Impressum</a>
+            </div>
+        </div>
+    </body>
+</html>

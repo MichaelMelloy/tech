@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/maincss.css">
+        <link rel="stylesheet" type="text/css" href="../css/autopilot.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+        <script src="../js/main.js"></script>
+        <meta charset="utf-8" />
+        <link rel="icon" href="../media/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body class="body" onload="thisEventListener();">
+        <img src="../media/rocket.png" class="scroll">
+        <!--NAVBAR-->
+        <div class="header">
+            <nav>
+                <a href="../index" class="logo">
+                    <img src="../media/rocket.png">
+                </a>
+
+                <ul>
+                    <a href="photography">PHOTOGRAPHY</a>
+                    <a href="astrophotography">ASTROPHOTOGRAPHY</a>
+                    <a href="projects">PROJECTS</a>
+                    <a href="about">ABOUT</a>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="content">
+            <div class="container">
+                <p class="big">SpaceX AutoDock system</p>
+                <p id="depend">Dependencies:</p>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a><br>
+                    <a href="https://github.com/mozilla/geckodriver/releases">Geckodriver (Place in Python Path)</a><br>
+                    <a href="https://www.python.org/">Python</a><br>
+
+                <p id="mainP">
+                    This simple autopilot will automatically dock the Dragon capsule to the ISS
+                    in SpaceX's online Space Sim. <br><br> This does not work well on slower machines due to 
+                    slow reaction times when updating values using Selenium. <br><br>
+                    A slower version for weaker machines will be added aswell.
+                </p>
+
+                <a class="git" href="https://github.com/MichaelMelloy/iss-sim-autopilot">Github Repo</a>
+            </div>
+        </div>
+
+
+
+        <!--Footer-->
+        <div class="Footer">
+            <div class="footContainer">
+                <div class="Name">Michael Deiwald</div>
+                <a href="legal" class="Legal">Datenschutz / Impressum</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+html
+{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body
+{
+    margin: 0;
+    background-color: var(--dark);
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+:root
+{
+    --text-color-1: rgb(212, 212, 212);
+    --text-color-2: rgb(180, 180, 180);
+    --text-color-3: rgb(150, 150, 150);
+    --text-color-1-inverted: rgb(25, 25, 25);
+    --dark: rgb(10, 10, 10);
+}
+
+.header
+{
+    top: 2%;
+    position: fixed;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.logo
+{
+    position: fixed;
+    height: 51px;
+}
+
+.logo img
+{
+    margin-top: 5%;
+    height: 90%;
+    transition: 0.2s;
+    transform: rotate(90deg);
+    animation: ease-in-out;
+}
+
+.logo img:hover
+{
+    transform: rotate(0deg);
+}
+
+nav
+{
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    left: 17.5%;
+}
+
+nav a
+{
+    transition: 0.3s;
+    opacity: 1;
+    margin-right: 1%;
+    color: var(--text-color-1);
+    font-family: 'Raleway', Arial, sans-serif;
+}
+nav a:hover
+{
+    opacity: 0.6;
+}
+
+nav ul
+{
+    margin-left: 1.5%;
+}
+
+
+.Footer
+{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--text-color-1-inverted);
+}
+
+.Name
+{
+    margin-bottom: 2%;
+    font-size: 125%;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: var(--text-color-1);
+}
+
+.Legal
+{
+
+    padding: 5px;
+
+    border: 2px solid var(--text-color-1);
+
+    font-family: 'Raleway', Arial, sans-serif;
+    color: var(--text-color-1);
+}
+
+.footContainer
+{
+    position: relative;
+    width: 50%;
+    top: 15%;
+    left: 5%;
+}
+
+.button
+{
+    box-sizing: border-box;
+    padding: 15px;
+    border: 2px solid var(--text-color-1);
+    color: var(--text-color-1);
+    transition: 0.3s;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.button:hover
+{
+    box-sizing: border-box;
+    color:var(--text-color-1-inverted);
+    background-color: var(--text-color-1);
+}
+
+body a
+{
+    text-decoration: none;
+}
+
+.scroll
+{
+    transition: 0.2s;
+    width: 1%;
+    position: fixed;
+    top: 1vh;
+    /* left: 98.5%; */
+    right: 0.5%;
+
+    transform: rotate(180deg);
+}
