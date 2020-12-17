@@ -3,13 +3,18 @@ import '../css/nav.css'
 import Footer from './Footer';
 import rocket from '../assets/rocket.png';
 
-import Index from './Index';
 import Photography from './Photography';
+import Astrophotography from './Astrophotography';
+import Projects from './Projects';
+import About from './About';
+import Index from './Index';
 
 class Nav extends React.Component {
     constructor(props){
         super(props)
+
         this.state=  {
+            allowClick: 0,
             lastScrollPosition: 0,
             currentScrollPosition: 0,
         }
@@ -17,17 +22,18 @@ class Nav extends React.Component {
 
     componentDidMount() 
     {
+        this.setState({allowClick: Date.now()})
         document.addEventListener('scroll', () => this.handleScroll())
     }
 
     render(){    
       return (
         <ul className="navbar">
-            <li ref={node => this.list = node} className="navitem" onClick={() => {this.changePage(<Index />)}}><img className="navrocket" src={rocket} /></li>
+            <li ref={node => this.list = node} className="navitem" onClick={ () => {this.changePage(<Index setPage={this.props.setPage} />)} }><img className="navrocket" src={rocket} /></li>
             <li className="navitem" onClick={() => {this.changePage(<Photography />)}}>PHOTOGRAPHY</li>
-            <li className="navitem" onClick={() => {this.changePage(<Index />)}}>ASTROPHOTOGRAPHY</li>
-            <li className="navitem" onClick={() => {this.changePage(<Index />)}}>PROJECTS</li>
-            <li className="navitem" onClick={() => {this.changePage(<Index />)}}>ABOUT</li>
+            <li className="navitem" onClick={() => {this.changePage(<Astrophotography />)}}>ASTROPHOTOGRAPHY</li>
+            <li className="navitem" onClick={() => {this.changePage(<Projects />)}}>PROJECTS</li>
+            <li className="navitem" onClick={() => {this.changePage(<About />)}}>ABOUT</li>
         </ul>
         );
       }
@@ -36,22 +42,22 @@ class Nav extends React.Component {
 
     changePage = (val) => 
     {
-        let thingy = document.getElementsByClassName("transitionBody")[0].style
-        thingy.display = "block"
-        thingy.opacity = 1
-        setTimeout(() => {
-        thingy.top = "0%"
+        if(Date.now() - this.state.allowClick >= 1300){ 
+            let thingy = document.getElementsByClassName("transitionBody")[0].style
+            thingy.display = "block"
             setTimeout(() => {
-                console.log("helo")
-                this.props.setPage(val); 
-                document.getElementsByClassName("transitionBody")[0].style.top = "-100%"
+            thingy.top = "0%"
                 setTimeout(() => {
-                    thingy.top = "100%"
-                    thingy.display = "none"
-                },1000)
-            }, 1000)
-        }, 100)
-
+                    this.props.setPage(val); 
+                    document.getElementsByClassName("transitionBody")[0].style.top = "-100%"
+                    setTimeout(() => {
+                        thingy.top = "100%"
+                        thingy.display = "none"
+                    },500)
+                }, 700)
+            }, 100)
+            this.setState({allowClick: Date.now()})
+         }
     }
 
     handleScroll()

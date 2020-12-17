@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import Index from './components/Index';
 import Photography from './components/Photography';
+import Astrophotography from './components/Astrophotography';
 
 import rocket from './assets/rocket.png';
 
@@ -15,7 +16,7 @@ class App extends React.Component {
 
     this.handler = this.handler.bind(this);
     this.state = {
-      currentPage: <Index />,
+      currentPage: <Index setPage={this.handler}/>,
     }
   }
 
@@ -24,20 +25,25 @@ class App extends React.Component {
     document.addEventListener('scroll', () => this.handleScroll())
   }
 
-render(){    
+render(){
+  let helo = this.thing()    
   return (
     <div className="App">
       <Transition />
-      <Nav setPage={this.handler} />
+      <Nav setPage={this.handler}/>
       <pageSpacer style={{marginTop: "5%"}} />
       {this.state.currentPage} {/*PAGE CONTENT IS IN HERE*/ }
-      {/*<Footer />*/}
+      <Footer setPage={this.handler}/>
       <img src={rocket} className="scroll" />
     </div>
     );
   }
 
 //Functions
+  thing = () =>
+  {
+    return <Index />
+  }
 
   handler(val) 
   {
